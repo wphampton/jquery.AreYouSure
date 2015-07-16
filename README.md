@@ -165,10 +165,7 @@ $(function() {
     *  Important to bind Are-you-sure to your form prior to binding your custom submit event handler
     *  This way you can have the form rechecked for dirtiness if your validation fails.
     */
-    // Initialize/Bind Are-you-sure to your form first
     $('#myform').areYouSure();
-	
-    // Custom submit event handler defined second
     $('#myform').submit(function (event) {
         if (validation_fails) {
 	    $('#myform').trigger('checkform.areYouSure');
